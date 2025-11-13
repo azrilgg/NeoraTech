@@ -119,15 +119,19 @@ nav ul li a:hover::after {
   }
 
   .menu-toggle {
-    display: block;
-    cursor: pointer;
-    font-size: 1.6rem;
-    color: var(--text);
-  }
+  display: none; /* default desktop */
+  position: absolute;
+  top: 1.2rem;
+  right: 5%;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: var(--text);
 }
 
-.menu-toggle {
-  display: none;
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
 }
 
 /* ===============================
