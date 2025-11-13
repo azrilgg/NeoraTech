@@ -499,3 +499,47 @@ footer {
   .hero h2 { font-size: 1.2rem; }
   .hero-image img { max-width: 100%; }
    }
+
+
+
+/* ===============================
+FIX OVERFLOW & RESPONSIVE BUGS
+=============================== */
+html, body {
+  max-width: 100%;
+  overflow-x: hidden; /* pastikan tidak geser horizontal */
+}
+
+/* Flex wrap untuk semua container */
+.about-grid,
+.contact-grid,
+.team-grid {
+  flex-wrap: wrap;
+}
+
+/* Pastikan nav mobile tidak keluar viewport */
+@media (max-width: 768px) {
+  nav ul {
+    max-width: 250px; /* agar menu toggle tidak terlalu lebar */
+  }
+}
+
+/* Hero image dan about image responsive */
+.hero-image img,
+.about-image img,
+.project-thumb img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Timeline responsive */
+.timeline {
+  padding-left: 40px;
+}
+
+.milestone span {
+  left: -50px;
+  font-size: 0.9rem;
+}
