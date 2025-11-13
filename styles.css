@@ -1,5 +1,5 @@
 /* ===============================
-   FONT & ROOT STYLE
+ROOT & FONT
 =============================== */
 :root {
   --bg: #f8f9fc;
@@ -27,7 +27,7 @@ body {
 }
 
 /* ===============================
-   NAVBAR
+NAVBAR
 =============================== */
 .navbar {
   position: fixed;
@@ -40,15 +40,15 @@ body {
   padding: 1.2rem 5%;
   backdrop-filter: blur(10px);
   background: rgba(255, 255, 255, 0.6);
-  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 2px 15px rgba(0,0,0,0.05);
   z-index: 1000;
   transition: var(--transition);
 }
 
 .navbar.scrolled {
   padding: 0.7rem 5%;
-  background: rgba(255, 255, 255, 0.9);
-  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+  background: rgba(255,255,255,0.9);
+  box-shadow: 0 2px 20px rgba(0,0,0,0.1);
 }
 
 .logo {
@@ -96,7 +96,14 @@ nav ul li a:hover::after {
   width: 100%;
 }
 
-/* Mobile Navbar */
+/* Responsive Nav */
+.menu-toggle {
+  display: none;
+  font-size: 1.6rem;
+  cursor: pointer;
+  color: var(--text);
+}
+
 @media (max-width: 768px) {
   nav ul {
     position: absolute;
@@ -107,7 +114,7 @@ nav ul li a:hover::after {
     padding: 1rem 2rem;
     flex-direction: column;
     gap: 1rem;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
     opacity: 0;
     pointer-events: none;
     transition: var(--transition);
@@ -119,23 +126,12 @@ nav ul li a:hover::after {
   }
 
   .menu-toggle {
-  display: none; /* default desktop */
-  position: absolute;
-  top: 1.2rem;
-  right: 5%;
-  font-size: 1.8rem;
-  cursor: pointer;
-  color: var(--text);
-}
-
-@media (max-width: 768px) {
-  .menu-toggle {
     display: block;
   }
 }
 
 /* ===============================
-   HERO SECTION
+HERO
 =============================== */
 .hero {
   min-height: 100vh;
@@ -171,10 +167,10 @@ nav ul li a:hover::after {
   max-width: 600px;
   margin: 1.5rem auto;
   color: #4b5563;
-  line-height: 1.7;
+  line-height: 1.6;
 }
 
-.btn-primary {
+.hero .btn-primary {
   background: var(--gradient);
   color: #fff;
   padding: 0.8rem 2rem;
@@ -185,18 +181,31 @@ nav ul li a:hover::after {
   transition: var(--transition);
 }
 
-.btn-primary:hover {
+.hero .btn-primary:hover {
   transform: translateY(-3px);
-  box-shadow: 0 6px 25px rgba(124, 58, 237, 0.4);
+  box-shadow: 0 6px 25px rgba(124,58,237,0.4);
 }
 
-/* Hero Glow Animation */
+.hero-image img {
+  width: 100%;
+  max-width: 700px;
+  margin-top: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  transition: transform 0.5s;
+}
+
+.hero-image img:hover {
+  transform: scale(1.05);
+}
+
+/* Background glow */
 .background-glow {
   position: absolute;
   width: 500px;
   height: 500px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(124, 58, 237, 0.15), transparent 70%);
+  background: radial-gradient(circle, rgba(124,58,237,0.15), transparent 70%);
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -205,18 +214,12 @@ nav ul li a:hover::after {
 }
 
 @keyframes pulse {
-  0%, 100% {
-    transform: translate(-50%, -50%) scale(1);
-    opacity: 0.5;
-  }
-  50% {
-    transform: translate(-50%, -50%) scale(1.2);
-    opacity: 1;
-  }
+  0%,100% { transform: translate(-50%, -50%) scale(1); opacity: 0.5; }
+  50% { transform: translate(-50%, -50%) scale(1.2); opacity: 1; }
 }
 
 /* ===============================
-   CONTAINERS & HEADINGS
+SECTIONS
 =============================== */
 section {
   padding: 6rem 8%;
@@ -226,33 +229,36 @@ section {
 h2 {
   text-align: center;
   margin-bottom: 2rem;
-  font-size: 2.4rem;
+  font-size: 2.2rem;
   background: var(--gradient);
   -webkit-background-clip: text;
   color: transparent;
 }
 
-/* ===============================
-   ABOUT SECTION
-=============================== */
-.about .content {
+/* About */
+.about-grid {
   display: flex;
-  flex-direction: column;
   align-items: center;
   gap: 2rem;
+  flex-wrap: wrap;
 }
 
-.about p {
-  max-width: 700px;
-  text-align: center;
-  line-height: 1.8;
+.about-image img {
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
+.about-content p {
+  margin-bottom: 1.5rem;
+  line-height: 1.7;
   color: #4b5563;
 }
 
 .about .stats {
   display: flex;
-  justify-content: center;
-  gap: 4rem;
+  justify-content: start;
+  gap: 3rem;
   margin-top: 2rem;
 }
 
@@ -261,27 +267,11 @@ h2 {
   color: var(--secondary);
 }
 
-.about-image {
-  width: 100%;
-  max-width: 800px;
-  margin-top: 2rem;
-  border-radius: 20px;
-  overflow: hidden;
-}
-
-.about-image img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-}
-
-/* ===============================
-   SERVICES SECTION
-=============================== */
+/* Services */
 .service-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
 }
 
 .service-card {
@@ -297,32 +287,11 @@ h2 {
   box-shadow: 0 10px 30px rgba(99,102,241,0.2);
 }
 
-.service-card h3 {
-  margin-bottom: 1rem;
-  font-size: 1.5rem;
-  color: var(--primary);
-}
-
-.service-card p {
-  color: #4b5563;
-  line-height: 1.6;
-}
-
-.service-card img {
-  width: 100%;
-  height: 180px;
-  border-radius: 15px;
-  object-fit: cover;
-  margin-bottom: 1rem;
-}
-
-/* ===============================
-   PROJECTS SECTION
-=============================== */
+/* Projects */
 .project-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2.5rem;
+  gap: 2rem;
 }
 
 .project-card {
@@ -338,40 +307,52 @@ h2 {
   box-shadow: 0 10px 25px rgba(99,102,241,0.15);
 }
 
-.project-card h3 {
-  margin-top: 1rem;
-  font-size: 1.4rem;
-  color: var(--secondary);
-}
-
-.project-card p {
-  color: #4b5563;
-  line-height: 1.6;
-}
-
-.project-thumb {
+.project-thumb img {
   width: 100%;
-  height: 180px;
   border-radius: 15px;
-  background: #e0e7ff; /* placeholder */
-  object-fit: cover;
+  margin-bottom: 1rem;
+  transition: transform 0.5s;
 }
 
-/* ===============================
-   ROADMAP SECTION
-=============================== */
+.project-thumb img:hover {
+  transform: scale(1.05);
+}
+
+/* Roadmap Timeline */
 .timeline {
   position: relative;
   margin-top: 3rem;
+  padding-left: 20px;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 20px;
+  top: 0;
+  height: 100%;
+  width: 4px;
+  background: var(--primary);
+  border-radius: 2px;
 }
 
 .milestone {
   background: var(--card-bg);
-  border-left: 5px solid var(--primary);
+  border-left: 4px solid var(--primary);
   padding: 1.5rem 2rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
   border-radius: 15px;
   transition: var(--transition);
+  position: relative;
+}
+
+.milestone span {
+  position: absolute;
+  left: -60px;
+  font-weight: 700;
+  color: var(--secondary);
+  font-size: 1rem;
+  top: 1.5rem;
 }
 
 .milestone:hover {
@@ -379,26 +360,7 @@ h2 {
   box-shadow: 0 5px 20px rgba(99,102,241,0.1);
 }
 
-.milestone span {
-  font-weight: 600;
-  color: var(--primary);
-  display: block;
-  margin-bottom: 0.5rem;
-}
-
-.milestone h3 {
-  margin-bottom: 0.5rem;
-  font-size: 1.3rem;
-}
-
-.milestone p {
-  color: #4b5563;
-  line-height: 1.6;
-}
-
-/* ===============================
-   TEAM SECTION
-=============================== */
+/* Team */
 .team-grid {
   display: flex;
   flex-wrap: wrap;
@@ -420,66 +382,69 @@ h2 {
   box-shadow: 0 8px 25px rgba(99,102,241,0.15);
 }
 
-.member .photo {
+.member .photo img {
   width: 100px;
   height: 100px;
   border-radius: 50%;
-  background: var(--light-glow);
-  margin: 0 auto 1rem auto;
   object-fit: cover;
+  margin-bottom: 1rem;
 }
 
-/* ===============================
-   TESTIMONIALS
-=============================== */
-.testimonial {
-  display: none;
-  text-align: center;
-  font-style: italic;
-  max-width: 600px;
-  margin: auto;
+/* Contact */
+.contact-grid {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
 }
 
-.testimonial.active {
-  display: block;
-}
-
-/* ===============================
-   CONTACT SECTION
-=============================== */
-.contact form {
+form {
+  flex: 1;
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  max-width: 500px;
-  margin: 0 auto;
 }
 
-.contact input,
-.contact textarea {
+input, textarea {
   padding: 1rem;
   border-radius: 10px;
   border: 1px solid #e2e8f0;
   outline: none;
   font-size: 1rem;
+  transition: var(--transition);
 }
 
-.contact input:focus,
-.contact textarea:focus {
+/* ===== Button for forms ===== */
+form .btn-primary {
+  background: var(--gradient);
+  color: #fff;
+  padding: 0.8rem 2rem;
+  border-radius: 30px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  box-shadow: 0 4px 20px var(--light-glow);
+  text-align: center;
+}
+
+form .btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 25px rgba(124, 58, 237, 0.4);
+}
+
+input:focus, textarea:focus {
   border-color: var(--primary);
   box-shadow: 0 0 10px rgba(99,102,241,0.2);
 }
 
-.contact .map {
-  width: 100%;
-  height: 300px;
-  border-radius: 15px;
-  margin-top: 2rem;
+.map {
+  flex: 1;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
 }
 
-/* ===============================
-   FOOTER
-=============================== */
+/* Footer */
 footer {
   text-align: center;
   padding: 2rem;
@@ -488,78 +453,49 @@ footer {
   color: #475569;
 }
 
-/* ===============================
-   RESPONSIVE
-=============================== */
-@media (max-width: 1024px) {
-  section {
-    padding: 4rem 5%;
+/* Scroll Top Button */
+.scroll-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--gradient);
+  color: white;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  box-shadow: 0 4px 20px rgba(124,58,237,0.3);
+  opacity: 0;
+  pointer-events: none;
+  transition: var(--transition);
+  z-index: 999;
+}
+
+.scroll-top.visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: scale(1);
+}
+
+.scroll-top:hover {
+  transform: scale(1.15);
+  box-shadow: 0 6px 30px rgba(99,102,241,0.5);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .about-grid {
+    flex-direction: column-reverse;
+  }
+  .contact-grid {
+    flex-direction: column;
   }
 }
 
 @media (max-width: 768px) {
-  .hero h1 {
-    font-size: 2.2rem;
-  }
-  .hero h2 {
-    font-size: 1.2rem;
-  }
-  .about .stats {
-    flex-direction: column;
-    gap: 1.5rem;
-  }
-}
-
-/* ===============================
-   BUTTON & LINK CLICK ANIMATION
-=============================== */
-.btn-primary,
-nav ul li a {
-  transition: var(--transition), transform 0.2s ease;
-}
-
-.btn-primary:active,
-nav ul li a:active {
-  transform: scale(0.95);
-}
-
-/* ===============================
-   SECTION APPEARANCE ON SCROLL
-=============================== */
-section {
-  opacity: 0;
-  transform: translateY(50px);
-  transition: opacity 0.8s ease, transform 0.8s ease;
-}
-
-section.aos-animate {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* ===============================
-   PROJECT & SERVICE CARD HOVER ANIMATION
-=============================== */
-.service-card:hover,
-.project-card:hover,
-.member:hover,
-.milestone:hover {
-  transform: translateY(-10px) rotateX(1deg) rotateY(1deg);
-  box-shadow: 0 10px 30px rgba(99, 102, 241, 0.25);
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-}
-
-/* ===============================
-   HERO GLOW PARALLAX (on mouse move)
-=============================== */
-.background-glow {
-  transition: transform 0.1s ease-out;
-}
-
-/* ===============================
-   NAV LINK CLICK SCALE
-=============================== */
-nav ul li a:focus {
-  transform: scale(1.05);
-  outline: none;
-    }
+  .hero h1 { font-size: 2.2rem; }
+  .hero h2 { font-size: 1.2rem; }
+  .hero-image img { max-width: 100%; }
+   }
