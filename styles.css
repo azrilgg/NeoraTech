@@ -145,6 +145,22 @@ HERO
   overflow: hidden;
 }
 
+.hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2; /* di bawah content dan background-glow */
+  overflow: hidden;
+}
+
+.hero-video video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* cover full, otomatis crop sesuai aspect ratio */
+}
+
 .hero h1 {
   font-size: 3rem;
   font-weight: 700;
