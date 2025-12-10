@@ -596,3 +596,121 @@ html, body {
   left: -50px;
   font-size: 0.9rem;
 }
+
+
+/* ===============================
+   NEORATECH ABOUT — PREMIUM REMAKE
+================================ */
+
+.nt-about {
+  padding: 110px 8%;
+  background: linear-gradient(180deg, #f9faff 0%, #ffffff 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.nt-about-container {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 70px;
+  align-items: center;
+}
+
+/* IMAGE */
+.nt-about-visual {
+  position: relative;
+}
+
+.nt-about-visual img {
+  width: 120%;
+  max-width: none;
+  border-radius: 26px;
+  box-shadow:
+    0 40px 80px rgba(99, 102, 241, 0.15),
+    0 15px 35px rgba(0, 0, 0, 0.08);
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* CONTENT */
+.nt-about-body {
+  position: relative;
+}
+
+.nt-about-label {
+  display: inline-block;
+  font-size: 13px;
+  letter-spacing: 2px;
+  font-weight: 600;
+  color: #6366f1;
+  margin-bottom: 14px;
+}
+
+.nt-about-title {
+  font-size: 44px;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 22px;
+  background: linear-gradient(90deg, #6366f1, #8b5cf6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.nt-about-desc {
+  font-size: 17px;
+  line-height: 1.8;
+  color: #475569;
+  margin-bottom: 38px;
+}
+
+/* STATS */
+.nt-about-stats {
+  display: flex;
+  gap: 45px;
+  margin-top: 10px;
+}
+
+.nt-stat h3 {
+  font-size: 36px;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+.nt-stat span {
+  font-size: 14px;
+  color: #64748b;
+}
+
+/* ===============================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 992px) {
+  .nt-about-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .nt-about-visual img {
+    width: 100%;
+    left: 0;
+    transform: none;
+  }
+
+  .nt-about-stats {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .nt-about-title {
+    font-size: 34px;
+  }
+
+  .nt-about-desc {
+    font-size: 16px;
+  }
+}
