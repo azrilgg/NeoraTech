@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NeoraTech | Beyond Innovation</title>
+
+  <!-- ===== LINKS ===== -->
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
+</head>
+
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <header class="navbar">
+    <div class="container">
+      <a href="#" class="logo" data-aos="fade-right">Neora<span>Tech</span></a>
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#roadmap">Roadmap</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="menu-toggle">☰</div>
+    </div>
+  </header>
+
+  <!-- ===== HERO SECTION ===== -->
+  <section id="home" class="hero">
+    <div class="hero-video">
+      <video autoplay muted loop playsinline>
+        <source src="videos/hero-background.mp4" type="video/mp4">
+      </video>
+    </div>
+
+    <div class="hero-content">
+      <h1 data-aos="zoom-out" data-aos-duration="1500" style="opacity: 1 !important;">
+        Future of <span class="gradient-text">Innovation</span>
+      </h1>
+      <h2 data-aos="fade-up" data-aos-delay="300" style="opacity: 1 !important;">
+        <span id="typed"></span>
+      </h2>
+      <p data-aos="fade-up" data-aos-delay="500" style="opacity: 1 !important;">
+        We transform complex ideas into elegant digital realities with cutting-edge technology and human-centric design.
+      </p>
+      <div class="hero-btns" data-aos="fade-up" data-aos-delay="700">
+        <a href="#about" class="btn-primary" style="animation: float3D 6s infinite ease-in-out;">Experience the
+          Future</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section class="nt-about section-padding" id="about">
+    <div class="container nt-about-container">
+      <div class="nt-about-visual" data-aos="fade-right">
+        <img src="images/about-office.jpg" alt="NeoraTech Innovation Lab">
+      </div>
+
+      <div class="nt-about-body" data-aos="fade-left">
+        <span class="nt-about-label">Beyond Innovation</span>
+        <h2 class="nt-about-title">Definining the <span class="gradient-text">Future</span> of Technology</h2>
+
+        <p class="nt-about-desc">
+          NeoraTech is an avant-garde technology firm dedicated to pushing the boundaries of what's possible. We blend
+          creativity, sophisticated design, and high-performance engineering to build digital solutions that redefine
+          industries.
+        </p>
+
+        <div class="nt-about-stats">
+          <div class="nt-stat">
+            <h3>10+</h3>
+            <span>Years of Mastery</span>
+          </div>
+          <div class="nt-stat">
+            <h3>50+</h3>
+            <span>Global Partners</span>
+          </div>
+          <div class="nt-stat">
+            <h3>200+</h3>
+            <span>Epic Deliveries</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===== SOCIAL PROOF (TRUST CORE) ===== -->
+  <section class="trust-proof">
+    <div class="container">
+      <div class="trust-header" data-aos="fade-up">
+        <span class="nt-about-label">Global Authority</span>
+        <h2>Trusted by <span class="gradient-text">100+</span> Industry Leaders</h2>
+      </div>
+
+      <div class="logo-ribbon-container">
+        <div class="logo-ribbon">
+          <img
+            src="images/team2.jpg"
+            alt="Client Logos">
+          <img
+            src="images/team3.jpg"
+            alt="Client Logos">
+            <img
+            src="images/team1.jpg"
+            alt="Client Logos">
+            <img
+            src="images/team2.jpg"
+            alt="Client Logos">
+            <img
+            src="images/team3.jpg"
+            alt="Client Logos">
+            <img
+            src="images/team1.jpg"
+            alt="Client Logos">
+            <img
+            src="images/team2.jpg"
+            alt="Client Logos">
+            <img
+            src="images/team3.jpg"
+            alt="Client Logos">
+            <img
+            src="images/team1.jpg"
+            alt="Client Logos">
+        </div>
+      </div>
+
+      <div class="authority-grid">
+        <div class="auth-item" data-aos="zoom-in" data-aos-delay="100">
+          <div class="auth-icon">🏆</div>
+          <h3>Awards</h3>
+          <p>3x Digital Excellence Winner</p>
+        </div>
+        <div class="auth-item" data-aos="zoom-in" data-aos-delay="200">
+          <div class="auth-icon">🛡️</div>
+          <h3>Certification</h3>
+          <p>ISO/IEC 27001 Certified Security</p>
+        </div>
+        <div class="auth-item" data-aos="zoom-in" data-aos-delay="300">
+          <div class="auth-icon">🤝</div>
+          <h3>Partners</h3>
+          <p>Official NVIDIA Inception Member</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SERVICES ===== -->
+  <section id="services" class="services section-padding">
+    <div class="container">
+      <div class="section-title">
+        <span class="nt-about-label" data-aos="fade-up">Our Expertise</span>
+        <h2 data-aos="fade-up">Elite <span class="gradient-text">Solutions</span></h2>
+        <p data-aos="fade-up">We focus on high-impact technologies that drive exponential growth and security.</p>
+      </div>
+
+      <div class="service-grid">
+        <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="service-thumb">
+            <img src="images/service.jpg" alt="AI Research">
+          </div>
+          <h3>AI Engineering</h3>
+          <p>Developing proprietary neural networks and autonomous systems that transform raw data into predictive
+            intelligence.</p>
+          <a href="#projects" class="service-link">Access Detail →</a>
+        </div>
+
+        <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="service-thumb">
+            <img src="images/service.jpg" alt="UX Design">
+          </div>
+          <h3>Digital Experiences</h3>
+          <p>Crafting immersive 3D web environments and mobile interfaces that focus on psychological design and fluid
+            performance.</p>
+          <a href="#projects" class="service-link">Access Detail →</a>
+        </div>
+
+        <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="service-thumb">
+            <img src="images/service.jpg" alt="Security">
+          </div>
+          <h3>Cyber Defense</h3>
+          <p>Military-grade encryption and AI-driven threat detection systems designed to protect your most valuable
+            digital assets.</p>
+          <a href="#projects" class="service-link">Access Detail →</a>
+        </div>
+
+        <div class="service-card" data-aos="fade-up" data-aos-delay="400">
+          <div class="service-thumb">
+            <img src="images/service.jpg" alt="Cloud">
+          </div>
+          <h3>Cloud Matrix</h3>
+          <p>Architecting scalable global infrastructures that ensure zero-latency and 99.99% uptime for
+            enterprise-scale operations.</p>
+          <a href="#projects" class="service-link">Access Detail →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROCESS ===== -->
+  <section id="process" class="process section-padding" style="background: var(--bg-soft);">
+    <div class="container">
+      <div class="section-title">
+        <span class="nt-about-label" data-aos="fade-up">How We Work</span>
+        <h2 data-aos="fade-up">Elite <span class="gradient-text">Workflow</span></h2>
+        <p data-aos="fade-up">A precision-driven methodology from blueprint to deployment.</p>
+      </div>
+
+      <div class="process-grid">
+        <div class="nt-workflow-step" data-aos="fade-up">
+          <div class="step-num gradient-text">01</div>
+          <div>
+            <h3 style="font-weight: 800; font-size: 1.8rem;">Discovery</h3>
+            <p class="nt-about-desc" style="margin-bottom: 0;">Architecting the vision through deep research and
+              psychological profiling of your target audience.</p>
+          </div>
+        </div>
+
+        <div class="nt-workflow-step" data-aos="fade-up" data-aos-delay="200">
+          <div class="step-num gradient-text">02</div>
+          <div>
+            <h3 style="font-weight: 800; font-size: 1.8rem;">Design</h3>
+            <p class="nt-about-desc" style="margin-bottom: 0;">Crafting luxurious 3D interfaces that defy conventional
+              constraints and wow at first glance.</p>
+          </div>
+        </div>
+
+        <div class="nt-workflow-step" data-aos="fade-up" data-aos-delay="400">
+          <div class="step-num gradient-text">03</div>
+          <div>
+            <h3 style="font-weight: 800; font-size: 1.8rem;">Build</h3>
+            <p class="nt-about-desc" style="margin-bottom: 0;">Engineered with the precision of a Swiss watch, optimized
+              for high-performance global scaling.</p>
+          </div>
+        </div>
+
+        <div class="nt-workflow-step" data-aos="fade-up" data-aos-delay="600">
+          <div class="step-num gradient-text">04</div>
+          <div>
+            <h3 style="font-weight: 800; font-size: 1.8rem;">Launch</h3>
+            <p class="nt-about-desc" style="margin-bottom: 0;">Deploying excellence through our Cloud Matrix network
+              with continuous 3D monitoring and evolution.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROJECTS ===== -->
+  <section id="projects" class="projects section-padding">
+    <div class="container">
+      <div class="section-title">
+        <h2 data-aos="fade-up">Master <span class="gradient-text">Portfolio</span></h2>
+        <p data-aos="fade-up">A glimpse into our most revolutionary collaborations and internal products.</p>
+      </div>
+
+      <div class="project-grid">
+        <div class="project-card" data-aos="zoom-in" data-aos-delay="100" data-project="neural-core">
+          <div class="project-thumb">
+            <img src="images/project1.jpg" alt="Neural Core">
+          </div>
+          <div class="project-info">
+            <h3>Neural Core</h3>
+            <p>AI Infrastructure</p>
+          </div>
+        </div>
+
+        <div class="project-card" data-aos="zoom-in" data-aos-delay="200" data-project="nexus-mobile">
+          <div class="project-thumb">
+            <img src="images/project2.jpg" alt="Nexus Mobile">
+          </div>
+          <div class="project-info">
+            <h3>Nexus Mobile</h3>
+            <p>Next-Gen App</p>
+          </div>
+        </div>
+
+        <div class="project-card" data-aos="zoom-in" data-aos-delay="300" data-project="vortex-cloud">
+          <div class="project-thumb">
+            <img src="images/project3.jpg" alt="Vortex Cloud">
+          </div>
+          <div class="project-info">
+            <h3>Vortex Cloud</h3>
+            <p>Platform Dashboard</p>
+          </div>
+        </div>
+
+        <div class="project-card" data-aos="zoom-in" data-aos-delay="400" data-project="zenith-shop">
+          <div class="project-thumb">
+            <img src="images/project4.jpg" alt="Zenith Shop">
+          </div>
+          <div class="project-info">
+            <h3>Zenith Shop</h3>
+            <p>E-Commerce Engine</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TESTIMONIALS ===== -->
+  <section id="testimonials" class="testimonials section-padding">
+    <div class="container">
+      <div class="section-title">
+        <h2 data-aos="fade-up">Client <span class="gradient-text">Voices</span></h2>
+        <p data-aos="fade-up">Trusted by global industry leaders to define their digital presence.</p>
+      </div>
+
+      <div class="client-voice-container">
+        <div class="voice-card" data-aos="zoom-in">
+          <div class="voice-photo">
+            <img src="images/team1.jpg" alt="Client">
+          </div>
+          <p class="voice-content">"NeoraTech's 3D integration is unlike anything we've seen. They didn't just build a
+            website; they built an experience that doubled our engagement."</p>
+          <h4 style="margin-top: 1.5rem; font-weight: 800;">Ahmad Azriel</h4>
+          <span class="nt-about-label" style="font-size: 0.6rem;">CEO, OmniMatrix</span>
+        </div>
+
+        <div class="voice-card" data-aos="zoom-in" data-aos-delay="200">
+          <div class="voice-photo">
+            <img src="images/team2.jpg" alt="Client">
+          </div>
+          <p class="voice-content">"The level of elegance and technical precision in their workflow is exceptional.
+            Truly
+            the future of web innovation."</p>
+          <h4 style="margin-top: 1.5rem; font-weight: 800;">Naya elara</h4>
+          <span class="nt-about-label" style="font-size: 0.6rem;">Design Lead, Horizon AI</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ROADMAP ===== -->
+  <section id="roadmap" class="roadmap section-padding">
+    <div class="container">
+      <div class="section-title">
+        <h2 data-aos="fade-up">Strategic <span class="gradient-text">Timeline</span></h2>
+        <p data-aos="fade-up">Our journey to redefine the digital landscape through continuous evolution.</p>
+      </div>
+
+      <div class="timeline">
+        <div class="milestone" data-aos="fade-right">
+          <div class="milestone-card">
+            <span class="gradient-text" style="font-weight: 900; font-size: 1.5rem;">2023</span>
+            <h3 style="font-weight: 800; margin: 1rem 0;">Global Expansion</h3>
+            <p class="nt-about-desc" style="font-size: 1rem;">Establishing strategic node partnerships across 3
+              continents, scaling our neural reach globally.</p>
+          </div>
+        </div>
+        <div class="milestone" data-aos="fade-left">
+          <div class="milestone-card">
+            <span class="gradient-text" style="font-weight: 900; font-size: 1.5rem;">2024</span>
+            <h3 style="font-weight: 800; margin: 1rem 0;">Neora AI Suite</h3>
+            <p class="nt-about-desc" style="font-size: 1rem;">Launching the flagship AI-driven analytics suite,
+              revolutionizing complex data interaction.</p>
+          </div>
+        </div>
+        <div class="milestone" data-aos="fade-right">
+          <div class="milestone-card">
+            <span class="gradient-text" style="font-weight: 900; font-size: 1.5rem;">2025</span>
+            <h3 style="font-weight: 800; margin: 1rem 0;">Vanguard Tech</h3>
+            <p class="nt-about-desc" style="font-size: 1rem;">Pioneering decentralized infrastructures and human-AI
+              collaborative 3D environments.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FAQ ===== -->
+  <section id="faq" class="faq section-padding" style="background: var(--bg-soft);">
+    <div class="container" style="max-width: 800px;">
+      <div class="section-title">
+        <h2 data-aos="fade-up">Knowledge <span class="gradient-text">Base</span></h2>
+        <p data-aos="fade-up">Addressing the most common inquiries about our revolutionary approach.</p>
+      </div>
+
+      <div class="faq-container">
+        <div class="faq-item" data-aos="fade-up">
+          <div class="faq-header">
+            What makes NeoraTech design "luxurious"?
+            <span>+</span>
+          </div>
+          <div class="faq-content">
+            <p>Our definition of luxury lies in the intersection of extreme speed, 3D spatial awareness, and
+              psychological color theory. We use advanced GSAP motion and high-fidelity assets to create fluid,
+              non-blocking experiences.</p>
+          </div>
+        </div>
+        <div class="faq-item" data-aos="fade-up" data-aos-delay="100">
+          <div class="faq-header">
+            How long does an elite transformation take?
+            <span>+</span>
+          </div>
+          <div class="faq-content">
+            <p>A full digital renaissance typically spans 4-8 weeks, depending on the complexity of the custom 3D models
+              and global architecture required.</p>
+          </div>
+        </div>
+        <div class="faq-item" data-aos="fade-up" data-aos-delay="200">
+          <div class="faq-header">
+            Do you support global enterprise scaling?
+            <span>+</span>
+          </div>
+          <div class="faq-content">
+            <p>Yes. Our Cloud Matrix infrastructure is designed to handle millions of simultaneous interactions with
+              zero latency, optimized across 40+ global server nodes.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ===== INSIGHTS (BLOG) ===== -->
+  <section id="blog" class="blog section-padding">
+    <div class="container">
+      <div class="section-title">
+        <span class="nt-about-label" data-aos="fade-up">Digital Intelligence</span>
+        <h2 data-aos="fade-up">Latest <span class="gradient-text">Insights</span></h2>
+        <p data-aos="fade-up">Pioneering analysis on the intersection of AI, luxury design, and future infrastructure.
+        </p>
+      </div>
+
+      <div class="blog-grid">
+        <article class="blog-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="blog-thumb">
+            <img
+              src="images/artic1.jpg"
+              alt="Future of AI">
+          </div>
+          <div class="blog-content">
+            <span class="blog-category">Neural Core</span>
+            <h3>The Renaissance of Artificial Intelligence</h3>
+            <p>Exploring how sub-millisecond processing is redefining human-machine collaboration in 2025.</p>
+            <a href="#" class="btn-text">Read Analysis →</a>
+          </div>
+        </article>
+
+        <article class="blog-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="blog-thumb">
+            <img
+              src="images/artiic2.jpg""
+              alt="Cyber Defense">
+          </div>
+          <div class="blog-content">
+            <span class="blog-category">Elite Defense</span>
+            <h3>Architecting Immune Digital Systems</h3>
+            <p>Why conventional firewalls are dead and how AI-driven immunity is the only path forward.</p>
+            <a href="#" class="btn-text">Read Analysis →</a>
+          </div>
+        </article>
+
+        <article class="blog-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="blog-thumb">
+            <img
+              src="images/artiic3.jpg""
+              alt="UX Design">
+          </div>
+          <div class="blog-content">
+            <span class="blog-category">Spatial UX</span>
+            <h3>Luxury in the Third Dimension</h3>
+            <p>The transition from flat interfaces to spatial digital experiences that evoke emotion.</p>
+            <a href="#" class="btn-text">Read Analysis →</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TEAM ===== -->
+  <section id="team" class="team section-padding">
+    <div class="container">
+      <div class="section-title">
+        <h2 data-aos="fade-up">Visionary <span class="gradient-text">Leadership</span></h2>
+        <p data-aos="fade-up">The minds architecting the technological renaissance.</p>
+      </div>
+
+      <div class="team-grid">
+        <div class="member service-card" data-aos="zoom-in" data-aos-delay="100">
+          <div class="photo"><img src="images/team1.jpg" alt="Azriel"></div>
+          <h3>Azriel</h3>
+          <p class="nt-about-label">Founder & CEO</p>
+        </div>
+        <div class="member service-card" data-aos="zoom-in" data-aos-delay="200">
+          <div class="photo"><img src="images/team2.jpg" alt="Naya"></div>
+          <h3>Naya</h3>
+          <p class="nt-about-label">Lead Designer</p>
+        </div>
+        <div class="member service-card" data-aos="zoom-in" data-aos-delay="300">
+          <div class="photo"><img src="images/team3.jpg" alt="Riko"></div>
+          <h3>Riko</h3>
+          <p class="nt-about-label">CTO</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section id="contact" class="contact section-padding">
+    <div class="container">
+      <div class="contact-grid" data-aos="fade-up">
+        <div class="contact-info">
+          <h3>Let's Forge the <span class="gradient-text">Future</span></h3>
+          <p class="nt-about-desc">Connect with our team to discuss your next breakthrough project.</p>
+
+          <div class="map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.2218!2d106.8136!3d-6.2088!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f6fca7fcb1f3%3A0x4b6d96f91a7a4f9!2sJakarta%2C%20Indonesia!5e0!3m2!1sen!2sid!4v1697338852244!5m2!1sen!2sid"
+              width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+          </div>
+        </div>
+
+        <form>
+          <input type="text" placeholder="Full Name" required>
+          <input type="email" placeholder="Email Address" required>
+          <textarea placeholder="Tell us about your project" rows="5" required></textarea>
+          <button type="submit" class="btn-primary">Initiate Contact</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER (GOD TIER) ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col" data-aos="fade-up">
+          <a href="#" class="logo">Neora<span>Tech</span></a>
+          <p style="margin-top: 1.5rem; color: var(--text-muted);">Pioneering the technological renaissance. We build
+            the
+            future through precision engineering and luxurious design.</p>
+          <div class="social-links">
+            <a href="#">Fb</a>
+            <a href="#">Tw</a>
+            <a href="#">Ig</a>
+            <a href="#">Li</a>
+          </div>
+        </div>
+        <div class="footer-col" data-aos="fade-up" data-aos-delay="100">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#projects">Portfolio</a></li>
+          </ul>
+        </div>
+        <div class="footer-col" data-aos="fade-up" data-aos-delay="200">
+          <h3>Expertise</h3>
+          <ul>
+            <li><a href="#">AI Research</a></li>
+            <li><a href="#">3D Design</a></li>
+            <li><a href="#">Cyber Defense</a></li>
+            <li><a href="#">Cloud Matrix</a></li>
+          </ul>
+        </div>
+        <div class="footer-col" data-aos="fade-up" data-aos-delay="300">
+          <h3>Newsletter</h3>
+          <p style="margin-bottom: 1.5rem; color: var(--text-muted); font-size: 0.9rem;">Join our elite list for
+            architectural insights.</p>
+          <div class="newsletter-form">
+            <input type="email" placeholder="Email Address">
+            <button class="btn-primary" style="padding: 1rem 1.5rem;">Join</button>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 <span class="gradient-text" style="font-weight: 800;">NeoraTech</span> — Mastering Innovation. All
+          rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== PROJECT MODAL (3D GLASS) ===== -->
+  <div id="project-modal" class="modal">
+    <div class="modal-content">
+      <span class="close-modal">&times;</span>
+      <div class="modal-body">
+        <div class="modal-visual">
+          <img id="modal-img" src="" alt="Project Visual">
+        </div>
+        <div class="modal-info">
+          <span class="nt-about-label" id="modal-category">Category</span>
+          <h2 id="modal-title" class="gradient-text">Project Title</h2>
+          <p id="modal-desc" class="nt-about-desc">Extremely detailed project transformation description goes here...
+          </p>
+          <div class="project-specs">
+            <div class="spec">
+              <strong>Tech Stack</strong>
+              <span id="modal-tech">GSAP, Three.js, React</span>
+            </div>
+            <div class="spec">
+              <strong>Impact</strong>
+              <span id="modal-impact">200% Growth</span>
+            </div>
+          </div>
+          <a href="#" class="btn-primary" style="margin-top: 2rem;">Visit Live Site</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== JS SCRIPTS ===== -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="script.js"></script>
+
+</body>
+
+</html>

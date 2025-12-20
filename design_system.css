@@ -1,0 +1,19 @@
+:root {
+    /* Colors */
+    --primary: #6C63FF;
+    --primary-dark: #4B4AC7;
+    --secondary: #FF6584;
+    --bg-soft: #F8F9FF;
+    --bg-white: #FFFFFF;
+    --text-main: #1A1A1A;
+    --text-muted: #666666;
+    --glass: rgba(255, 255, 255, 0.7);
+    --glass-border: rgba(255, 255, 255, 0.2);
+    --shadow: 0 10px 30px rgba(108, 99, 255, 0.1);
+    
+    /* Spacing */
+    --section-padding: 100px 0;
+    
+    /* Transitions */
+    --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
