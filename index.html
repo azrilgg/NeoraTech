@@ -65,7 +65,7 @@
   <section class="nt-about section-padding" id="about">
     <div class="container nt-about-container">
       <div class="nt-about-visual" data-aos="fade-right">
-        <img src="images/about-office.jpg" alt="NeoraTech Innovation Lab">
+        <img src="images/neob.jpeg" alt="NeoraTech Innovation Lab">
       </div>
 
       <div class="nt-about-body" data-aos="fade-left">
@@ -170,17 +170,17 @@
 
       <div class="authority-grid">
         <div class="auth-item" data-aos="zoom-in" data-aos-delay="100">
-          <div class="auth-icon">🏆</div>
+          <div class="auth-icon" style="font-size: 3rem; color: var(--primary); margin-bottom: 1rem;"><i class="fa-solid fa-trophy"></i></div>
           <h3>Awards</h3>
           <p>3x Digital Excellence Winner</p>
         </div>
         <div class="auth-item" data-aos="zoom-in" data-aos-delay="200">
-          <div class="auth-icon">🛡️</div>
+          <div class="auth-icon" style="font-size: 3rem; color: var(--primary); margin-bottom: 1rem;"><i class="fa-solid fa-shield-halved"></i></div>
           <h3>Certification</h3>
           <p>ISO/IEC 27001 Certified Security</p>
         </div>
         <div class="auth-item" data-aos="zoom-in" data-aos-delay="300">
-          <div class="auth-icon">🤝</div>
+          <div class="auth-icon" style="font-size: 3rem; color: var(--primary); margin-bottom: 1rem;"><i class="fa-solid fa-handshake"></i></div>
           <h3>Partners</h3>
           <p>Official NVIDIA Inception Member</p>
         </div>
@@ -355,35 +355,45 @@
           <div class="voice-photo">
             <img src="images/devin.jpg" alt="Client">
           </div>
-          <p class="voice-content">"NeoraTech's 3D integration is unlike anything we've seen. They didn't just build a
-            website; they built an experience that doubled our engagement."</p>
-          <h4 style="margin-top: 1.5rem; font-weight: 800;">King devin</h4>
-          <span class="nt-about-label" style="font-size: 0.6rem;">IT support</span>
+          <div class="voice-rating" style="color: #fbbf24; margin-bottom: 1rem; font-size: 1.2rem; transform: translateZ(25px);">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p class="voice-content" style="transform: translateZ(20px);">"NeoraTech's 3D integration is unlike anything we've seen. They didn't just build a website; they built an experience that doubled our engagement."</p>
+          <div style="transform: translateZ(30px);">
+            <h4 style="margin-top: 1.5rem; font-weight: 800;">King devin</h4>
+            <span class="nt-about-label" style="font-size: 0.6rem;">IT support</span>
+          </div>
+        </div>
+
+        <div class="voice-card" data-aos="zoom-in" data-aos-delay="100">
+          <div class="voice-photo">
+            <img src="images/team2.jpg" alt="Client">
+          </div>
+          <div class="voice-rating" style="color: #fbbf24; margin-bottom: 1rem; font-size: 1.2rem; transform: translateZ(25px);">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p class="voice-content" style="transform: translateZ(20px);">"The level of elegance and technical precision in their workflow is exceptional. Truly the future of web innovation."</p>
+          <div style="transform: translateZ(30px);">
+            <h4 style="margin-top: 1.5rem; font-weight: 800;">Naya elara</h4>
+            <span class="nt-about-label" style="font-size: 0.6rem;">Design Lead, Horizon AI</span>
+          </div>
         </div>
 
         <div class="voice-card" data-aos="zoom-in" data-aos-delay="200">
           <div class="voice-photo">
-            <img src="images/team2.jpg" alt="Client">
+            <img src="images/team4.jpg" alt="Client">
           </div>
-          <p class="voice-content">"The level of elegance and technical precision in their workflow is exceptional.
-            Truly
-            the future of web innovation."</p>
-          <h4 style="margin-top: 1.5rem; font-weight: 800;">Naya elara</h4>
-          <span class="nt-about-label" style="font-size: 0.6rem;">Design Lead, Horizon AI</span>
+          <div class="voice-rating" style="color: #fbbf24; margin-bottom: 1rem; font-size: 1.2rem; transform: translateZ(25px);">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p class="voice-content" style="transform: translateZ(20px);">"The elegance and technical super phenomenal. They crafted an unparalleled 3D masterpiece for us."</p>
+          <div style="transform: translateZ(30px);">
+            <h4 style="margin-top: 1.5rem; font-weight: 800;">Erlang</h4>
+            <span class="nt-about-label" style="font-size: 0.6rem;">3D Artist</span>
+          </div>
         </div>
       </div>
     </div>
-
-    <div class="voice-card" data-aos="zoom-in" data-aos-delay="200">
-          <div class="voice-photo">
-            <img src="images/team4.jpg" alt="Client">
-          </div>
-          <p class="voice-content">"The elegance and technical Super Phenomenal "</p>
-          <h4 style="margin-top: 1.5rem; font-weight: 800;">Erlang</h4>
-          <span class="nt-about-label" style="font-size: 0.6rem;">3D Artist</span>
-        </div>
-      </div>
-  </div>
   </section>
 
   <!-- ===== ROADMAP ===== -->
@@ -477,45 +487,39 @@
       </div>
 
       <div class="blog-grid">
-        <article class="blog-card" data-aos="fade-up" data-aos-delay="100">
+        <article class="blog-card insight-trigger" data-aos="fade-up" data-aos-delay="100" data-insight="renaissance" style="cursor: pointer;">
           <div class="blog-thumb">
-            <img
-              src="images/artic1.jpg"
-              alt="Future of AI">
+            <img src="images/artic1.jpg" alt="Future of AI">
           </div>
           <div class="blog-content">
             <span class="blog-category">Neural Core</span>
             <h3>The Renaissance of Artificial Intelligence</h3>
             <p>Exploring how sub-millisecond processing is redefining human-machine collaboration in 2025.</p>
-            <a href="#" class="btn-text">Read Analysis →</a>
+            <span class="btn-text" style="color: var(--primary); font-weight: bold;">Read Analysis →</span>
           </div>
         </article>
 
-        <article class="blog-card" data-aos="fade-up" data-aos-delay="200">
+        <article class="blog-card insight-trigger" data-aos="fade-up" data-aos-delay="200" data-insight="immune" style="cursor: pointer;">
           <div class="blog-thumb">
-            <img
-              src="images/artiic2.jpg""
-              alt="Cyber Defense">
+            <img src="images/artiic2.jpg" alt="Cyber Defense">
           </div>
           <div class="blog-content">
             <span class="blog-category">Elite Defense</span>
             <h3>Architecting Immune Digital Systems</h3>
             <p>Why conventional firewalls are dead and how AI-driven immunity is the only path forward.</p>
-            <a href="#" class="btn-text">Read Analysis →</a>
+            <span class="btn-text" style="color: var(--primary); font-weight: bold;">Read Analysis →</span>
           </div>
         </article>
 
-        <article class="blog-card" data-aos="fade-up" data-aos-delay="300">
+        <article class="blog-card insight-trigger" data-aos="fade-up" data-aos-delay="300" data-insight="spatial" style="cursor: pointer;">
           <div class="blog-thumb">
-            <img
-              src="images/artiic3.jpg""
-              alt="UX Design">
+            <img src="images/artiic3.jpg" alt="UX Design">
           </div>
           <div class="blog-content">
             <span class="blog-category">Spatial UX</span>
             <h3>Luxury in the Third Dimension</h3>
             <p>The transition from flat interfaces to spatial digital experiences that evoke emotion.</p>
-            <a href="#" class="btn-text">Read Analysis →</a>
+            <span class="btn-text" style="color: var(--primary); font-weight: bold;">Read Analysis →</span>
           </div>
         </article>
       </div>
@@ -649,7 +653,30 @@
               <span id="modal-impact">200% Growth</span>
             </div>
           </div>
-          <a href="ahmadazriel.vercel.app" class="btn-primary" style="margin-top: 2rem;">Visit Live Site</a>
+          <a id="modal-link" href="#" target="_blank" class="btn-primary" style="margin-top: 2rem;">Visit Live Site</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== INSIGHT MODAL (3D GLASS) ===== -->
+  <div id="insight-modal" class="modal">
+    <div class="modal-content">
+      <span class="close-modal">&times;</span>
+      <div class="modal-body">
+        <div class="modal-visual">
+          <img id="insight-modal-img" src="" alt="Insight Visual">
+        </div>
+        <div class="modal-info">
+          <span class="nt-about-label" id="insight-modal-category">Category</span>
+          <h2 id="insight-modal-title" class="gradient-text" style="font-size: 2.2rem;">Insight Title</h2>
+          <p id="insight-modal-desc" class="nt-about-desc" style="margin-bottom: 2rem;">Full article description goes here...</p>
+          <div class="project-specs">
+            <div class="spec" style="grid-column: span 2;">
+              <strong>Key Takeaway</strong>
+              <span id="insight-modal-takeaway">Takeaway</span>
+            </div>
+          </div>
         </div>
       </div>
     </div>
