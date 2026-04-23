@@ -1003,11 +1003,11 @@ nav ul li a:hover {
 
   /* Modal Mobile Fixes */
   .modal {
-    padding: 10px;
+    padding: 15px;
   }
 
   .modal-content {
-    border-radius: 30px;
+    border-radius: 25px;
   }
 
   .modal-body {
@@ -1019,11 +1019,17 @@ nav ul li a:hover {
   }
 
   .modal-info {
-    padding: 2rem;
+    padding: 1.5rem;
   }
 
   .modal-info h2 {
-    font-size: 2rem;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+  
+  .project-specs {
+    grid-template-columns: 1fr;
+    margin-top: 1.5rem;
   }
 }
 
@@ -1040,6 +1046,31 @@ nav ul li a:hover {
 
   .logo {
     font-size: 1.5rem;
+  }
+
+  /* Extreme Mobile Modal Fixes */
+  .modal {
+    padding: 10px;
+  }
+
+  .modal-info {
+    padding: 1.2rem;
+  }
+
+  .modal-visual {
+    height: 200px;
+  }
+
+  .modal-info h2 {
+    font-size: 1.5rem;
+  }
+  
+  .close-modal {
+    top: 10px;
+    right: 10px;
+    font-size: 2rem;
+    width: 40px;
+    height: 40px;
   }
 }
 
@@ -1233,9 +1264,12 @@ nav ul li a:hover {
   background: rgba(255, 255, 255, 0.98);
   width: 100%;
   max-width: 1100px;
+  max-height: 90vh;
   border-radius: 40px;
   position: relative;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
   box-shadow: 0 50px 100px rgba(0, 0, 0, 0.3);
   transform: scale(0.9) translateY(50px);
   transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
@@ -1247,14 +1281,22 @@ nav ul li a:hover {
 
 .close-modal {
   position: absolute;
-  top: 25px;
-  right: 35px;
+  top: 20px;
+  right: 30px;
   font-size: 3rem;
   font-weight: 300;
   color: var(--text-dark);
   cursor: pointer;
-  z-index: 10;
+  z-index: 50;
   transition: var(--transition);
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(5px);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .close-modal:hover {
@@ -1265,6 +1307,8 @@ nav ul li a:hover {
 .modal-body {
   display: grid;
   grid-template-columns: 1.2fr 1fr;
+  flex: 1;
+  overflow-y: auto;
 }
 
 .modal-visual {
@@ -1332,16 +1376,15 @@ nav ul li a:hover {
   }
 
   .modal-visual {
-    height: 300px;
+    height: 400px;
   }
 
   .modal-info {
-    padding: 2.5rem;
+    padding: 3rem;
   }
 
   .modal-content {
-    max-height: 90vh;
-    overflow-y: auto;
+    /* Base styles now handle max-height and flex column */
   }
 }
 
