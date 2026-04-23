@@ -137,36 +137,40 @@ document.addEventListener('DOMContentLoaded', () => {
     // Project Modal Logic (God Tier)
     const projectData = {
         'neural-core': {
-            title: 'Neural Core',
-            category: 'AI Infrastructure',
-            tech: 'PyTorch, CUDA, Next.js',
-            impact: '300% Processing Speed',
-            desc: 'A planetary-scale AI backbone designed for sub-millisecond neural processing. We architected the entire core from scratch using low-level optimization and advanced 3D monitoring interfaces.',
-            img: 'images/project1.jpg'
+            title: 'Ecolearn',
+            category: 'Web Learning',
+            tech: 'React, Node.js, Next.js',
+            impact: '300% Engagement',
+            desc: 'A comprehensive web learning platform designed for optimal knowledge retention. Ecolearn integrates interactive modules and progress tracking.',
+            img: 'images/ecolearnind.png',
+            link: 'https://ecolearnind.vercel.app'
         },
         'nexus-mobile': {
-            title: 'Nexus Mobile',
-            category: 'Next-Gen App',
-            tech: 'Flutter, WebGL, Firebase',
+            title: 'Furnihome id',
+            category: 'Furniture Website',
+            tech: 'React, Three.js, Tailwind',
             impact: '5M+ Active Users',
-            desc: 'Redefining mobile interaction through spatial UI and ultra-fluid animations. Nexus is not just an app; it\'s a portable ecosystem that adapts to user behavior in real-time.',
-            img: 'images/project2.jpg'
+            desc: 'Redefining furniture shopping through spatial UI and ultra-fluid animations. Furnihome id offers an immersive catalog experience.',
+            img: 'images/furnihome project.png',
+            link: 'https://furnihomeid.vercel.app'
         },
         'vortex-cloud': {
-            title: 'Vortex Cloud',
-            category: 'Platform Dashboard',
-            tech: 'Three.js, D3.js, AWS',
+            title: 'Zenith OS',
+            category: 'Productivity Tools',
+            tech: 'Electron, React, Node.js',
             impact: '99.99% Global Uptime',
-            desc: 'A decentralized cloud monitoring platform that visualizes global data streams in 3D space. Vortex allows enterprise leaders to see their empire from a God-eye view.',
-            img: 'images/project3.jpg'
+            desc: 'A comprehensive productivity suite with native performance. Zenith OS allows seamless workflow management for professionals.',
+            img: 'images/zenith.png',
+            link: 'https://zenithosid.vercel.app'
         },
         'zenith-shop': {
-            title: 'Zenith Shop',
-            category: 'E-Commerce Engine',
+            title: 'AURA SNEAKERS',
+            category: 'E-Commerce Website',
             tech: 'Shopify Plus, GSAP, Node.js',
             impact: '150% Conversion Lift',
-            desc: 'The gold standard of luxury e-commerce. Zenith combines high-fashion aesthetics with a military-grade checkout engine for a zero-friction shopping experience.',
-            img: 'images/project4.jpg'
+            desc: 'The gold standard of sneaker e-commerce. AURA SNEAKERS combines high-fashion aesthetics with a seamless checkout engine for a zero-friction shopping experience.',
+            img: 'images/aurasneakers.jpeg',
+            link: 'https://aurasneakersid.vercel.app/'
         }
     };
 
@@ -186,6 +190,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 document.getElementById('modal-tech').innerText = data.tech;
                 document.getElementById('modal-impact').innerText = data.impact;
                 document.getElementById('modal-desc').innerText = data.desc;
+                
+                const linkEl = document.getElementById('modal-link');
+                if (linkEl) {
+                    linkEl.href = data.link || '#';
+                }
 
                 modal.classList.add('active');
                 document.body.style.overflow = 'hidden'; // Prevent scroll
@@ -193,14 +202,62 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    closeModal.addEventListener('click', () => {
-        modal.classList.remove('active');
-        document.body.style.overflow = 'auto'; // Re-enable scroll
+    const insightData = {
+        'renaissance': {
+            title: 'The Renaissance of Artificial Intelligence',
+            category: 'Neural Core',
+            img: 'images/artic1.jpg',
+            desc: 'As AI rapidly evolves, we are entering a new era of computational capability. The transition from simple automated tasks to complex reasoning algorithms is reshaping industries at an unprecedented scale. Our analysis delves into how sub-millisecond processing power is redefining human-machine collaboration in the modern workspace.',
+            takeaway: 'Sub-millisecond processing bridges the gap between human intuition and machine execution.'
+        },
+        'immune': {
+            title: 'Architecting Immune Digital Systems',
+            category: 'Elite Defense',
+            img: 'images/artiic2.jpg',
+            desc: 'Traditional cybersecurity measures act as a static wall against dynamic threats. The new standard requires an immune system approach—self-healing architectures that predict, isolate, and neutralize breaches before they occur. We explore the implementation of AI-driven immunity to secure vital infrastructures.',
+            takeaway: 'Predictive, self-healing architectures replace static firewalls for robust security.'
+        },
+        'spatial': {
+            title: 'Luxury in the Third Dimension',
+            category: 'Spatial UX',
+            img: 'images/artiic3.jpg',
+            desc: 'The web is moving from 2D flat layouts to immersive spatial environments. True luxury in digital design is no longer just aesthetics, but the seamless, fluid interaction within a 3D space. This shift demands new principles in depth perception, motion timing, and psychological color theory to evoke genuine emotion.',
+            takeaway: 'Spatial UX translates physical luxury into fluid, emotional digital experiences.'
+        }
+    };
+
+    const insightModal = document.getElementById('insight-modal');
+    const insightCards = document.querySelectorAll('.insight-trigger');
+
+    insightCards.forEach(card => {
+        card.addEventListener('click', () => {
+            const insightId = card.getAttribute('data-insight');
+            const data = insightData[insightId];
+
+            if (data) {
+                document.getElementById('insight-modal-img').src = data.img;
+                document.getElementById('insight-modal-title').innerText = data.title;
+                document.getElementById('insight-modal-category').innerText = data.category;
+                document.getElementById('insight-modal-desc').innerText = data.desc;
+                document.getElementById('insight-modal-takeaway').innerText = data.takeaway;
+
+                insightModal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+        });
+    });
+
+    const closeModals = document.querySelectorAll('.close-modal');
+    closeModals.forEach(btn => {
+        btn.addEventListener('click', () => {
+            document.querySelectorAll('.modal').forEach(m => m.classList.remove('active'));
+            document.body.style.overflow = 'auto';
+        });
     });
 
     window.addEventListener('click', (e) => {
-        if (e.target === modal) {
-            modal.classList.remove('active');
+        if (e.target.classList.contains('modal')) {
+            document.querySelectorAll('.modal').forEach(m => m.classList.remove('active'));
             document.body.style.overflow = 'auto';
         }
     });
